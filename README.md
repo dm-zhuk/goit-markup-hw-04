@@ -1,2 +1,2 @@
-# goit-markup-hw-03
-Flexbox
+# goit-markup-hw-04
+Decorative images
