@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet" />
-
   <!-- Modern normalize -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
     integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
@@ -25,11 +24,15 @@
       <nav class="header-nav">
         <a class="header-logo link" href="./index.html">Web<span class="header-logo-accent">Studio</span></a>
         <ul class="header-nav-list list">
-          <li class="header-nav-item"><a class="nav-item link" href="./index.html">Studio</a></li>
-          <li class="header-nav-item">
-            <a class="nav-item link" href="./portfolio.html">Portfolio</a>
+          <li class="header-nav-item current">
+            <a class="nav-item-link link" href="./index.html">Studio</a>
           </li>
-          <li class="header-nav-item"><a class="nav-item link" href="">Contacts</a></li>
+          <li class="header-nav-item">
+            <a class="nav-item-link link" href="./portfolio.html">Portfolio</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="nav-item-link link" href="">Contacts</a>
+          </li>
         </ul>
       </nav>
 
@@ -51,9 +54,18 @@
     <section class="hero">
       <div class="hero-container container">
         <h1 class="hero-title">Effective Solutions for Your Business</h1>
-        <button class="hero-btn hero-btn-link link" type="button">
-          Order Service
-        </button>
+        <button class="hero-btn hero-btn-link link" type="button" data-modal-open>Order Service</button>
+
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button class="modal-btn" type="button" data-modal-close>
+              <svg class="modal-btn-icon" width="8px" height="8px">
+                <use href="./images/sprite.svg#icon-close-black-18dp-2"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -63,6 +75,11 @@
         <h2 class="visually-hidden">Features</h2>
         <ul class="features-list list">
           <li class="features-item">
+            <div class="featues-icons-thumb">
+              <svg class="features-icon" width="64px" height="64px">
+                <use href="./images/sprite.svg#icon-antenna"></use>
+              </svg>
+            </div>
             <h3 class="features-subtitle">Strategy</h3>
             <p class="features-text">
               Our goal is to identify the business problem to walk away with the
@@ -70,6 +87,11 @@
             </p>
           </li>
           <li class="features-item">
+            <div class="featues-icons-thumb">
+              <svg class="features-icon" width="64px" height="64px">
+                <use href="./images/sprite.svg#icon-clock"></use>
+              </svg>
+            </div>
             <h3 class="features-subtitle">Punctuality</h3>
             <p class="features-text">
               Bring the key message to the brand's audience for the best price
@@ -77,6 +99,11 @@
             </p>
           </li>
           <li class="features-item">
+            <div class="featues-icons-thumb">
+              <svg class="features-icon" width="64px" height="64px">
+                <use href="./images/sprite.svg#icon-diagram"></use>
+              </svg>
+            </div>
             <h3 class="features-subtitle">Diligence</h3>
             <p class="features-text">
               Research and confirm brands that present the strongest digital
@@ -84,6 +111,11 @@
             </p>
           </li>
           <li class="features-item">
+            <div class="featues-icons-thumb">
+              <svg class="features-icon" width="64px" height="64px">
+                <use href="./images/sprite.svg#icon-astronaut"></use>
+              </svg>
+            </div>
             <h3 class="features-subtitle">Technologies</h3>
             <p class="features-text">
               Design practice focused on digital experiences. We bring forth a
@@ -122,6 +154,36 @@
             <div class="teamcards-content-block">
               <h3 class="teamcards-content-title">Mark Guerrero</h3>
               <p class="teamcards-content-text">Product Designer</p>
+              <ul class="teamcards-socials list">
+                <li class="teamcards-socials-icons">
+                  <a class="teamcards-socials-link link" href="https://instagram.com" target="_blank"
+                    rel="noopener noreferrer" aria-label="Instagram link"><svg class="teamcards-icon" width="16px"
+                      height="16px">
+                      <use href="./images/sprite.svg#icon-instagram-2"></use>
+                    </svg></a>
+                </li>
+                <li class="teamcards-socials-icons">
+                  <a class="teamcards-socials-link link" href="https://twitter.com" target="_blank"
+                    rel="noopener noreferrer" aria-label="Twitter link"><svg class="teamcards-icon" width="16px"
+                      height="16px">
+                      <use href="./images/sprite.svg#icon-twitter-1"></use>
+                    </svg></a>
+                </li>
+                <li class="teamcards-socials-icons">
+                  <a class="teamcards-socials-link link" href="https://facebook.com" target="_blank"
+                    rel="noopener noreferrer" aria-label="Facebook link"><svg class="teamcards-icon" width="16px"
+                      height="16px">
+                      <use href="./images/sprite.svg#icon-facebook-1"></use>
+                    </svg></a>
+                </li>
+                <li class="teamcards-socials-icons">
+                  <a class="teamcards-socials-link link" href="https://www.linkedin.com/company/linkedin"
+                    target="_blank" rel="noopener noreferrer" aria-label="Linkedin link"><svg class="teamcards-icon"
+                      width="16px" height="16px">
+                      <use href="./images/sprite.svg#icon-linkedin-1"></use>
+                    </svg></a>
+                </li>
+              </ul>
             </div>
           </li>
           <li class="teamcards-content-item">
@@ -129,6 +191,36 @@
             <div class="teamcards-content-block">
               <h3 class="teamcards-content-title">Tom Ford</h3>
               <p class="teamcards-content-text">Frontend Developer</p>
+              <ul class="teamcards-socials list">
+                <li class="teamcards-socials-icons">
+                  <a class="teamcards-socials-link link" href="https://instagram.com" target="_blank"
+                    rel="noopener noreferrer" aria-label="Instagram link"><svg class="teamcards-icon" width="16px"
+                      height="16px">
+                      <use href="./images/sprite.svg#icon-instagram-2"></use>
+                    </svg></a>
+                </li>
+                <li class="teamcards-socials-icons">
+                  <a class="teamcards-socials-link link" href="https://twitter.com" target="_blank"
+                    rel="noopener noreferrer" aria-label="Twitter link"><svg class="teamcards-icon" width="16px"
+                      height="16px">
+                      <use href="./images/sprite.svg#icon-twitter-1"></use>
+                    </svg></a>
+                </li>
+                <li class="teamcards-socials-icons">
+                  <a class="teamcards-socials-link link" href="https://facebook.com" target="_blank"
+                    rel="noopener noreferrer" aria-label="Facebook link"><svg class="teamcards-icon" width="16px"
+                      height="16px">
+                      <use href="./images/sprite.svg#icon-facebook-1"></use>
+                    </svg></a>
+                </li>
+                <li class="teamcards-socials-icons">
+                  <a class="teamcards-socials-link link" href="https://www.linkedin.com/company/linkedin"
+                    target="_blank" rel="noopener noreferrer" aria-label="Linkedin link"><svg class="teamcards-icon"
+                      width="16px" height="16px">
+                      <use href="./images/sprite.svg#icon-linkedin-1"></use>
+                    </svg></a>
+                </li>
+              </ul>
             </div>
           </li>
           <li class="teamcards-content-item">
@@ -136,6 +228,36 @@
             <div class="teamcards-content-block">
               <h3 class="teamcards-content-title">Camila Garcia</h3>
               <p class="teamcards-content-text">Marketing</p>
+              <ul class="teamcards-socials list">
+                <li class="teamcards-socials-icons">
+                  <a class="teamcards-socials-link link" href="https://instagram.com" target="_blank"
+                    rel="noopener noreferrer" aria-label="Instagram link"><svg class="teamcards-icon" width="16px"
+                      height="16px">
+                      <use href="./images/sprite.svg#icon-instagram-2"></use>
+                    </svg></a>
+                </li>
+                <li class="teamcards-socials-icons">
+                  <a class="teamcards-socials-link link" href="https://twitter.com" target="_blank"
+                    rel="noopener noreferrer" aria-label="Twitter link"><svg class="teamcards-icon" width="16px"
+                      height="16px">
+                      <use href="./images/sprite.svg#icon-twitter-1"></use>
+                    </svg></a>
+                </li>
+                <li class="teamcards-socials-icons">
+                  <a class="teamcards-socials-link link" href="https://facebook.com" target="_blank"
+                    rel="noopener noreferrer" aria-label="Facebook link"><svg class="teamcards-icon" width="16px"
+                      height="16px">
+                      <use href="./images/sprite.svg#icon-facebook-1"></use>
+                    </svg></a>
+                </li>
+                <li class="teamcards-socials-icons">
+                  <a class="teamcards-socials-link link" href="https://www.linkedin.com/company/linkedin"
+                    target="_blank" rel="noopener noreferrer" aria-label="Linkedin link"><svg class="teamcards-icon"
+                      width="16px" height="16px">
+                      <use href="./images/sprite.svg#icon-linkedin-1"></use>
+                    </svg></a>
+                </li>
+              </ul>
             </div>
           </li>
           <li class="teamcards-content-item">
@@ -143,7 +265,76 @@
             <div class="teamcards-content-block">
               <h3 class="teamcards-content-title">Daniel Wilson</h3>
               <p class="teamcards-content-text">UI Designer</p>
+              <ul class="teamcards-socials list">
+                <li class="teamcards-socials-icons">
+                  <a class="teamcards-socials-link link" href="https://instagram.com" target="_blank"
+                    rel="noopener noreferrer" aria-label="Instagram link"><svg class="teamcards-icon" width="16px"
+                      height="16px">
+                      <use href="./images/sprite.svg#icon-instagram-2"></use>
+                    </svg></a>
+                </li>
+                <li class="teamcards-socials-icons">
+                  <a class="teamcards-socials-link link" href="https://twitter.com" target="_blank"
+                    rel="noopener noreferrer" aria-label="Twitter link"><svg class="teamcards-icon" width="16px"
+                      height="16px">
+                      <use href="./images/sprite.svg#icon-twitter-1"></use>
+                    </svg></a>
+                </li>
+                <li class="teamcards-socials-icons">
+                  <a class="teamcards-socials-link link" href="https://facebook.com" target="_blank"
+                    rel="noopener noreferrer" aria-label="Facebook link"><svg class="teamcards-icon" width="16px"
+                      height="16px">
+                      <use href="./images/sprite.svg#icon-facebook-1"></use>
+                    </svg></a>
+                </li>
+                <li class="teamcards-socials-icons">
+                  <a class="teamcards-socials-link link" href="https://www.linkedin.com/company/linkedin"
+                    target="_blank" rel="noopener noreferrer" aria-label="Linkedin link"><svg class="teamcards-icon"
+                      width="16px" height="16px">
+                      <use href="./images/sprite.svg#icon-linkedin-1"></use>
+                    </svg></a>
+                </li>
+              </ul>
             </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION IV -->
+    <section class="customers-section">
+      <div class="container">
+        <h2 class="customers-title section-title">customers</h2>
+        <ul class="customers-list list">
+          <li class="customers-item">
+            <a class="customers-item-link link" href=""><svg class="customers-icon" width="104px" height="56px">
+                <use href="./images/sprite.svg#icon-Logo"></use>
+              </svg></a>
+          </li>
+          <li class="customers-item">
+            <a class="customers-item-link link" href=""><svg class="customers-icon" width="104px" height="56px">
+                <use href="./images/sprite.svg#icon-Logo1"></use>
+              </svg></a>
+          </li>
+          <li class="customers-item">
+            <a class="customers-item-link link" href=""><svg class="customers-icon" width="104px" height="56px">
+                <use href="./images/sprite.svg#icon-Logo2"></use>
+              </svg></a>
+          </li>
+          <li class="customers-item">
+            <a class="customers-item-link link" href=""><svg class="customers-icon" width="104px" height="56px">
+                <use href="./images/sprite.svg#icon-Logo3"></use>
+              </svg></a>
+          </li>
+          <li class="customers-item">
+            <a class="customers-item-link link" href=""><svg class="customers-icon" width="104px" height="56px">
+                <use href="./images/sprite.svg#icon-Logo4"></use>
+              </svg></a>
+          </li>
+          <li class="customers-item">
+            <a class="customers-item-link link" href=""><svg class="customers-icon" width="104px" height="56px">
+                <use href="./images/sprite.svg#icon-Logo5"></use>
+              </svg></a>
           </li>
         </ul>
       </div>
@@ -152,13 +343,47 @@
 
   <footer class="footer">
     <div class="footer-container container">
-      <a class="footer-logo link" href="./index.html">Web<span class="footer-logo-accent">Studio</span></a>
-      <p class="footer-text">
-        Increase the flow of customers and sales for your business with digital
-        marketing & growth solutions.
-      </p>
+      <div class="footer-top">
+        <a class="footer-logo link" href="./index.html">Web<span class="footer-logo-accent">Studio</span></a>
+        <h3 class="footer-subject">Social media</h3>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-text">
+          Increase the flow of customers and sales for your business with digital
+          marketing & growth solutions.
+        </p>
+        <ul class="footer-socials list">
+          <li class="footer-socials-item">
+            <a class="footer-socials-link link" href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram link"><svg class="footer-socials-icon" width="24px" height="24px">
+                <use href="./images/sprite.svg#icon-instagram-2"></use>
+              </svg></a>
+          </li>
+          <li class="footer-socials-item">
+            <a class="footer-socials-link link" href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+              aria-label="Twitter link"><svg class="footer-socials-icon" width="24px" height="24px">
+                <use href="./images/sprite.svg#icon-twitter-1"></use>
+              </svg></a>
+          </li>
+          <li class="footer-socials-item">
+            <a class="footer-socials-link link" href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+              aria-label="Facebook link"><svg class="footer-socials-icon" width="24px" height="24px">
+                <use href="./images/sprite.svg#icon-facebook-1"></use>
+              </svg></a>
+          </li>
+          <li class="footer-socials-item">
+            <a class="footer-socials-link link" href="https://www.linkedin.com/company/linkedin" target="_blank"
+              rel="noopener noreferrer" aria-label="Linkedin link"><svg class="footer-socials-icon" width="24px"
+                height="24px">
+                <use href="./images/sprite.svg#icon-linkedin-1"></use>
+              </svg></a>
+          </li>
+        </ul>
+      </div>
     </div>
   </footer>
+
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>
