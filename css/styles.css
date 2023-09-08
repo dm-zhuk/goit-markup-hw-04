@@ -580,6 +580,9 @@ img {
   background-color: var(--primary-cl);
   border: 1px solid transparent;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: background-color var(--trns-fast);
   cursor: pointer;
 }
@@ -654,6 +657,7 @@ img {
 
 .modal-btn-icon {
   padding: 8px;
+  fill: var(--main-cl);
   transition: fill var(--trns-fast);
 }
 
@@ -665,7 +669,7 @@ img {
 
 .modal-btn-icon:hover,
 .modal-btn-icon:focus {
-  fill: #ffffff
+  fill: var(--white-cl);
 }
 
 /**
@@ -734,7 +738,7 @@ img {
 }
 
 .project-cards-link {
-  display: inline-block;
+  display: block;
   transition: box-shadow var(--trns-fast);
 }
 
@@ -761,7 +765,7 @@ img {
   padding: 40px 32px;
   background-color: var(--primary-cl);
   height: 100%;
-  width: auto;
+  width: 100%;
   transform: translateY(100%);
   transition: transform var(--trns-fast);
 }
