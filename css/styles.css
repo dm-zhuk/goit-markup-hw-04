@@ -54,7 +54,7 @@ body {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 /* reset styles start */
@@ -452,7 +452,6 @@ img {
 }
 
 .teamcards-icon {
-  padding: 12px;
   fill: var(--light-cl);
 }
 
@@ -490,7 +489,6 @@ img {
 }
 
 .customers-icon {
-  padding: 16px 32px;
   fill: currentColor;
   transition: fill var(--trns-fast);
 }
@@ -592,7 +590,6 @@ img {
 }
 
 .footer-socials-icon {
-  padding: 8px;
   fill: var(--light-cl);
 }
 
@@ -635,7 +632,6 @@ img {
 .modal-window.is-hidden .modal {
   transform: translateX(-50%) translateY(-50%) scale(0.2);
   opacity: 0;
-  transition-delay: 500ms;
 }
 
 .modal-btn {
@@ -656,18 +652,17 @@ img {
 }
 
 .modal-btn-icon {
-  padding: 8px;
-  border-radius: 50%;
-  fill: var(--main-cl);
   transition: fill var(--trns-fast);
 }
 
 .modal-btn:hover,
-.modal-btn-icon:hover,
-.modal-btn:focus,
-.modal-btn-icon:focus {
+.modal-btn:focus {
   background-color: var(--pressed-bg-cl);
   border: none;
+}
+
+.modal-btn:hover .modal-btn-icon,
+.modal-btn:focus .modal-btn-icon {
   fill: var(--white-cl);
 }
 
@@ -751,7 +746,6 @@ img {
   position: absolute;
   top: 0;
   font-size: var(--default-fs);
-  font-weight: var(--default-fw);
   letter-spacing: var(--main-lt-space);
   line-height: var(--main-lh);
   color: var(--light-cl);
