@@ -598,7 +598,7 @@ img {
 
 /* pop-up window, modal */
 
-.backdrop {
+.modal-window {
   position: fixed;
   top: 0;
   left: 0;
@@ -609,7 +609,7 @@ img {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is-hidden {
+.modal-window.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -632,7 +632,7 @@ img {
   transition: transform var(--trns-fast);
 }
 
-.backdrop.is-hidden .modal {
+.modal-window.is-hidden .modal {
   transform: translateX(-50%) translateY(-50%) scale(0.2);
   opacity: 0;
   transition-delay: 500ms;
@@ -657,19 +657,17 @@ img {
 
 .modal-btn-icon {
   padding: 8px;
+  border-radius: 50%;
   fill: var(--main-cl);
   transition: fill var(--trns-fast);
 }
 
 .modal-btn:hover,
-.modal-btn:focus {
+.modal-btn-icon:hover,
+.modal-btn:focus,
+.modal-btn-icon:focus {
   background-color: var(--pressed-bg-cl);
   border: none;
-  fill: var(--white-cl);
-}
-
-.modal-btn-icon:hover,
-.modal-btn-icon:focus {
   fill: var(--white-cl);
 }
 
